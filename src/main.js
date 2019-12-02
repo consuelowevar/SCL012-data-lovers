@@ -4,9 +4,9 @@
  * import POTTER from './data/potter/potter.js'
  */
 
-import { example } from './data.js';
+import LoL from './data/lol/lol.js';
 
-console.log(example);
+console.log(LoL);
 
 /*
  * console.log(POKEMON);
