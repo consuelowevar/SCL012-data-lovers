@@ -7,38 +7,41 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <div id="root">
-    <div align="center">
-    <script type="module" src="main.js"></script>
-    <type class=logo>  <img src="imagen/logo.png"> 
+      <header class="cabezote">
+          <span class="logo"><img src="imagen/logo.png"></span>
+          
+          <nav class="bmenu">     <!--  barra nav -->
+              <ul class="">
+                <li><button class="textbarra" id="btnIndex">Juego</button></li> 
+                <li>
+                  <button class="textbarra" id="btnChampions">Campeones</button> 
+                  <div class="submenu">
+                    <ul id="submenu-roles"> <!-- SUBMENU DE ROL DESPLEGABLE  --> 
+                          <li><button class="text" id="assassin">ASESINOS</button></li>
+                          <li><button class="text" id="fighter">LUCHADORES</button></li>
+                          <li><button class="text" id="mage">MAGOS</button</li>
+                          <li><button class="text" id="tank">TANQUES</button</li>
+                          <li><button class="text" id="marksman">TIRADORES</button</li>
+                          <li><button class="text" id="support">SOPORTES</button</li> 
+                    </ul> 
+                 </div>  
+                </li> 
+                <li><button class="textbarra" id="btnGamemode"><span>Modo de juego</span></button></li>  
+              </ul>
+          </nav>  
+      </header>
+
+
+
+
+
+
 
       
-      <div class=contenedor> 
-
-        <a href="index.html" class="textbarra" id="juego"> Juego </a> 
-        <a href="campeones.html" class="textbarra" id="campeones"> Campeones </a> 
-        <a href="modojuego.html" class="textbarra" id="modo de juego"> Modo de Juego </a> 
-      
-      </div>
-
-    <div class=intro>
-    <p><div class="text">¿Qué es League of Legends?
-
-       League of Legends es un juego en línea competitivo de ritmo frenético, que fusiona la velocidad y la intensidad de la estrategia en tiempo real (ETR) con elementos de juegos de rol. Dos equipos de poderosos campeones, cada uno con un diseño y un estilo de juego únicos, compiten cara a cara a través de diversos campos de batalla y modos de juego. Con un plantel de campeones en constante expansión, actualizaciones frecuentes y un emocionante panorama competitivo, League of Legends ofrece posibilidades de juego ilimitadas para usuarios de todos los niveles de habilidad.
-      <br>
-      <br>
-
-      League of Legends cuenta con un plantel de campeones en constante crecimiento, cada uno con un diseño y estilo de juego único. Aquí podrás ver el plantel actual y conocer más detalles sobre los personajes que te interesen.</div>
-      
-    </p>
-   </div>
-   <div class=contenedor>
-    <a href="https://signup.lan.leagueoflegends.com/es/signup/index#/" class="btn"id="btnJ"> Jugar </a> 
-    <a href="https://las.leagueoflegends.com/es/page/unete-la-comunidad-de-league-legends" class="btn"id="btnC"> Comunidad </a> 
-    
-   </div>
-    </div>
-  </div>
+    <script src="./data/lol/lol.js"></script>
+    <script src="data.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
