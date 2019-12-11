@@ -3,11 +3,14 @@
 
 
 //div Index//const
+      document.getElementById("contIndex").style.display="";
+      document.getElementById("contModoJuego").style.display="none";
+      document.getElementById("showChampions").style.display="none";
 
 const Inicio = document.getElementById("btnIndex");//declarando variable que mostrará pantalla inicial//
       Inicio.addEventListener("click", pantallaIndex); //asignandole una función//
+      
 
-     
 function pantallaIndex(){//funcion que ocultara y mostrará pantalla index //
   document.getElementById("contIndex").style.display="";
   document.getElementById("contModoJuego").style.display="none";
@@ -71,9 +74,10 @@ const containerChampions=document.getElementById("containerChampions");
 btnChampions.addEventListener('click', () =>{   
     //Object.value y Object.keys capturamos los valores
     //containerChampions.innerHTML = dataLol[0].name;
+    containerChampions.innerHTML =""
 
     for (let i=0;i <dataLol.length; i++){
-
+      
         containerChampions.innerHTML += 
 
         `<div class="card-champion">

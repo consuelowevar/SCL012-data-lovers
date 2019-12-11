@@ -11,13 +11,13 @@
   <body>
 
 <header class="cabezote">
-  <span class="logo"><img src="imagen/logo.png"></span>
+  <a href="#" class="logo" id="logo"> <img src="imagen/logo.png"></a>
   
   <nav class="bmenu">     <!--  barra nav -->
       <ul class="">
-        <li><button class="textbarra" id="btnIndex">Juego</button></li> 
+        <li><a href="#" class="textbarra" id="btnIndex"><span>Juego</span></a></li>
         <li>
-          <button class="textbarra" id="btnChampions">Campeones</button> 
+          <a href="#" class="textbarra" id="btnChampions"><span>Campeones</span></a>
           <div class="submenu">
             <ul id="submenu-roles"> <!-- SUBMENU DE ROL DESPLEGABLE  --> 
                   <li><button class="text" id="assassin">ASESINOS</button></li>
@@ -29,7 +29,7 @@
             </ul> 
          </div>  
         </li> 
-        <li><button class="textbarra" id="btnGamemode"><span>Modo de juego</span></button></li>  
+        <li><a href="#" class="textbarra" id="btnGamemode"><span>Modo de juego</span></a></li>  
       </ul>
   </nav>  
 </header>
@@ -37,7 +37,7 @@
     
     
    
-      <div id="root">
+      <div id="root" class="cuerpo">
 
 <!--contenido-->
     <div id="contIndex">
@@ -78,6 +78,7 @@
    <!--  seccion visulaizacion de champions-->
  </section>
  </div>
+</div>
    
    <div><!--pie de pagina-->
   <footer class="footer">
@@ -91,7 +92,7 @@
         </footer>
         </div>
         
-      </div>
+      
     
 
     <script type="module" src="main.js"></script>

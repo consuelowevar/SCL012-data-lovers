@@ -9,6 +9,10 @@ body {
     background-attachment: fixed;
 }
 
+.cuerpo{
+  display: flow-root;
+  justify-content: center;
+}
 
 .intro{
   background-color: rgb(0, 0, 0, 0.8);
@@ -54,6 +58,7 @@ body {
     justify-content: center;
     text-decoration: none;
     top: 500px;
+    display: flex;
   }
 
   .text {
@@ -157,8 +162,6 @@ margin: 10px;
   .bmenu > ul > li:hover div{
      display:table;
      display: flex;
-     /*justify-content: space-around;*/
-     
   }
 
   .bmenu ul{
