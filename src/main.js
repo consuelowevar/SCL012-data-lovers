@@ -1,13 +1,15 @@
 
 //mostrando y ocultando div//
 
+      document.getElementById("contIndex").style.display="";
+      document.getElementById("contModoJuego").style.display="none";
+      document.getElementById("showChampions").style.display="none";
 
 //div Index//const
-
 const Inicio = document.getElementById("btnIndex");//declarando variable que mostrará pantalla inicial//
       Inicio.addEventListener("click", pantallaIndex); //asignandole una función//
+      
 
-     
 function pantallaIndex(){//funcion que ocultara y mostrará pantalla index //
   document.getElementById("contIndex").style.display="";
   document.getElementById("contModoJuego").style.display="none";
@@ -54,6 +56,7 @@ console.log(example); */
 
 import  LoL  from './data/lol/lol.js';
 console.log('LoL', LoL);
+import {lala} from './data.js';
 
 const dataLol=Object.values(LoL.data);
 console.log(dataLol);
@@ -71,9 +74,10 @@ const containerChampions=document.getElementById("containerChampions");
 btnChampions.addEventListener('click', () =>{   
     //Object.value y Object.keys capturamos los valores
     //containerChampions.innerHTML = dataLol[0].name;
+    containerChampions.innerHTML =""
 
     for (let i=0;i <dataLol.length; i++){
-
+      
         containerChampions.innerHTML += 
 
         `<div class="card-champion">
@@ -95,5 +99,46 @@ btnChampions.addEventListener('click', () =>{
         </div>`
         
        // containerChampions.innerHTML += dataLol[i].title;
+    
     }
+
+    
 });
+
+function crearTarjeta (datos){
+  for (let i=0;i <datos.length; i++){
+      containerChampions.innerHTML += 
+
+      `<div class="card-champion">
+      <div><img class="avatar" src="${datos[i].img}">
+      </div>
+      <div class="name">
+      <h1>${datos[i].name}</h1></div>
+      <div class="tittle">
+      <h4>${datos[i].title}</h4></div>
+      <div><img class=power src="imagen/attack.jpg"
+      <p> Ataque ${datos[i]. info. attack}</p></div>
+      <div><img class=power src="imagen/defense.jpg"
+      <p> Defensa ${datos[i]. info. defense}</p></div>
+      <div><img class=power src="imagen/magic.jpg"
+      <p> Magia ${datos[i]. info. magic}</p></div>
+      <div><img class=power src="imagen/difficulty.jpg"
+      <p> Dificultad ${datos[i]. info. difficulty}</p></div>
+      </div>
+      </div>`
+      
+     // containerChampions.innerHTML += dataLol[i].title;
+  }
+}
+//BOTON ASESINOS
+const btnassassin= document.getElementById('assassin');
+console.log(btnassassin)
+btnassassin.addEventListener('click', () => {
+    let valorClase= document.getElementById("assassin").value
+    console.log(valorClase)
+    containerChampions.innerHTML=""
+    let datosAssasin=lala(valorClase)
+    crearTarjeta(datosAssasin)
+});
+
+
