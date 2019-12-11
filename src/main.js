@@ -1,3 +1,49 @@
+//mostrando y ocultando div//
+
+
+//div Index//const
+
+const Inicio = document.getElementById("btnIndex");//declarando variable que mostrará pantalla inicial//
+      Inicio.addEventListener("click", pantallaIndex); //asignandole una función//
+
+     
+function pantallaIndex(){//funcion que ocultara y mostrará pantalla index //
+  document.getElementById("contIndex").style.display="";
+  document.getElementById("contModoJuego").style.display="none";
+  document.getElementById("showChampions").style.display="none";
+}
+
+//div pantalla inicial//
+
+const volverInicio = document.getElementById("logo");
+      volverInicio.addEventListener("click", pantallaIndex);
+
+
+//div Campeones//
+
+const champions = document.getElementById("btnChampions");
+      champions.addEventListener("click", pantallaCampeones);
+
+function pantallaCampeones(){
+  document.getElementById("showChampions").style.display="block";
+  document.getElementById("contIndex").style.display="none";
+  document.getElementById("contModoJuego").style.display="none";
+}
+
+//div Modo Juego//
+
+const modojuego = document.getElementById("btnGamemode");
+      modojuego.addEventListener("click", pantallaModoJuego);
+
+function pantallaModoJuego(){
+    document.getElementById("contModoJuego").style.display="block";
+    document.getElementById("showChampions").style.display="none";
+    document.getElementById("contIndex").style.display="none";
+}
+
+
+
+
 /* import LoL from './data/lol/lol.js'*/
  
 /*import { example } from './data.js';
@@ -13,7 +59,7 @@ console.log(dataLol);
 //const para boton champions
 const btnChampions=document.getElementById("btnChampions");
 //const para contenedor de fichas champions
-const containerChampions=document.getElementById("contenedor");
+const containerChampions=document.getElementById("containerChampions");
 
 /* PROPIEDADES X FILTRAR 
     name, title, img, blurb, info,( attack, defense, magic, difficulty), tags, 
