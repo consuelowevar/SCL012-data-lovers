@@ -7,8 +7,51 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <div id="root"></div>
+
+    <header>
+      <!--  logo LoL   --> 
+     <div class="image-menu-nav">
+       
+        <!--  barra de navegacion -->
+        <nav>
+          <ul class=""><img src="imagen/barra.png">
+            <li><a href="#" class="textbarra" id="btnInicio"> Inicio </a></li>
+            <li><a href="#" class="textbarra" id="btnChampions"> Campeones </a>
+              <ul id="submenu">
+                <li><button class="button" id="assassin" value="Assassin">ASESINOS</button></li>
+                <li><button class="button" id="fighters" value="Fighter">LUCHADORES</button></li>
+                <li><button class="button" id="wizards" value="Mage">MAGOS</button></li>
+                <li><button class="button" id="tanks" value="Tank">TANQUES</button></li>
+                <li><button class="button" id="shooters" value="Marksman">TIRADORES</button></li>
+                <li><button class="button" id="support" value="Support">SOPORTES</button></li>
+              </ul>
+            </li>
+            <li><a href="#" class="textbarra" id="btnModo"> Modo de Juego </a></li>
+          </ul>  
+        </nav>
+      </div>
+    </header>
+
+    <div id="inicio">
+      <!--  seccion descripcion del juego-->
+    </div>
+
+    <div  id="showChampions"> </div>
+      <section class="container" id="containerChampions">
+        
+      <!--  seccion visulaizacion de champions-->
+    </section>
+    </div>
+        <!--
+          <script src="./data/lol/lol.js"></script>
+        <script src="data.js"></script>
+        <script src="main.js"></script>
+        !-->
+
+    
     <script type="module" src="main.js"></script>
+    <script type="module" src="data.js"></script>
   </body>
 </html>
