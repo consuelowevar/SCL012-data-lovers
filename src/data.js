@@ -2,6 +2,7 @@
 /* Manejo de data */
 // esta es una función de ejemplo
 
+
 import  LoL  from './data/lol/lol.js';
 
 const dataLol=Object.entries(LoL.data); //.entries llama a las [key:value]

@@ -7,49 +7,8 @@ body {
     width: 100%;
     height: 100%;
     background-attachment: fixed;
-
-  }
-
-.cabezote{
-  width: 1100px;
-  margin: auto;
-  height:339px;
-  padding-top: 30px;
 }
 
-.bmenu ul{
-  list-style-type: none;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 88px;
-  background-image: url(imagen/barra.png)
-  
-}
-
-.bmenu > ul > li > ul{
-  position: absolute;
-  background:rgb(0, 0, 0, 0.8);
-  left: 17%;
-  right: 15%;
-  overflow: hidden;
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  -ms-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  transition: all .3s ease;
-  margin-block-end: 10%;
-  justify-content: space-evenly;
-
-}
-
-.bmenu > ul > li > ul{
-  height: 47px;
-  font-family: Salsa;
-  font-size: 20px;
-  color: #D6B525;
-  text-decoration: none;
-  }
 
 .intro{
   background-color: rgb(0, 0, 0, 0.8);
@@ -59,18 +18,47 @@ body {
   padding: 3rem;
 }  
 
-.textbarra{
-height: 47px;
-font-family: Salsa;
-font-size: 36px;
-color: #D6B525;
-text-shadow: 2px 0 0 #372B00, -2px 0 0 #372B00, 0 2px 0 #372B00, 0 -2px 0 #372B00, 1px 1px #372B00, -1px -1px 0 #372B00, 1px -1px 0 #372B00, -1px 1px 0 #372B00;
-justify-content: center;
-text-decoration: none;
-top: 500px;
-}
 
-.text {
+  .cabezote{
+    width: 1100px;
+    margin: auto;
+    height:339px;
+    padding-top: 30px;
+    align-content: center;
+  }
+
+  .logo{
+    display: flex;
+    justify-content:center;
+  }
+  
+  .bmenu > ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 88px;
+    background-image: url(imagen/barra.png)  
+  }
+  
+  .textbarra{
+    background: transparent;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 47px;
+    font-family: Salsa;
+    font-size: 36px;
+    color: #D6B525;
+    text-shadow: 2px 0 0 #372B00, -2px 0 0 #372B00, 0 2px 0 #372B00, 0 -2px 0 #372B00, 1px 1px #372B00, -1px -1px 0 #372B00, 1px -1px 0 #372B00, -1px 1px 0 #372B00;
+    justify-content: center;
+    text-decoration: none;
+    top: 500px;
+  }
+
+  .text {
+    background: transparent;
+    border:none;
     font-family: "salsa";
     color: #D6B525;
     font-size: 20px;
@@ -154,12 +142,73 @@ margin: 10px;
   height: 15px;
   width: 15px;
   }
+
   .tittle{
     margin-top: -10px;
   }
 
-@font-face{font-family:salsa; 
-  src:url(font/salsa-regular.ttf);
-   }
 
- 
+  nav > ul > li:hover{
+    background-image: url(imagen/select.png);
+    background-position: bottom;
+    background-repeat:no-repeat ;
+  }
+
+  .bmenu > ul > li:hover div{
+     display:table;
+     display: flex;
+     /*justify-content: space-around;*/
+     
+  }
+
+  .bmenu ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 88px;    
+  }
+
+  .bmenu > ul > li > div{
+    position:absolute;
+    background:rgb(0, 0, 0, 0.8);
+    left: 17%;
+    right: 15%;
+    overflow: hidden;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    margin-block-end: 10%;
+    justify-content: space-around;
+    display:none;  
+  }
+
+  .bmenu > ul > li > div >ul {
+    height: 47px;
+    font-family: Salsa;
+    font-size: 20px;
+    color: #D6B525;
+    text-decoration: none;
+    display: flex;
+    justify-content:space-around;
+
+  }
+
+  .bmenu > ul > li > div >ul >li {
+    display: flex;
+    justify-content:space-evenly;
+    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  
+
+  
+
+  @font-face{font-family:salsa; 
+    src:url(font/salsa-regular.ttf);
+     }
+
