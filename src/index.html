@@ -7,25 +7,36 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
+
+<header class="cabezote">
+  <span class="logo"><img src="imagen/logo.png"></span>
+  
+  <nav class="bmenu">     <!--  barra nav -->
+      <ul class="">
+        <li><button class="textbarra" id="btnIndex">Juego</button></li> 
+        <li>
+          <button class="textbarra" id="btnChampions">Campeones</button> 
+          <div class="submenu">
+            <ul id="submenu-roles"> <!-- SUBMENU DE ROL DESPLEGABLE  --> 
+                  <li><button class="text" id="assassin">ASESINOS</button></li>
+                  <li><button class="text" id="fighter">LUCHADORES</button></li>
+                  <li><button class="text" id="mage">MAGOS</button</li>
+                  <li><button class="text" id="tank">TANQUES</button</li>
+                  <li><button class="text" id="marksman">TIRADORES</button</li>
+                  <li><button class="text" id="support">SOPORTES</button</li> 
+            </ul> 
+         </div>  
+        </li> 
+        <li><button class="textbarra" id="btnGamemode"><span>Modo de juego</span></button></li>  
+      </ul>
+  </nav>  
+</header>
+
     
-    <div align="center">
     
-    
-    <header class="cabezote">
-      <!--logo-->
-    <a href="#" class="logo" id=logo><img src="imagen/logo.png"></a>
-      
-      <!--barra menu-->
-     <nav class="bmenu">
-       <ul>
-         <li><a href="#" class="textbarra" id="btnIndex"><span>Juego</span></a></li>
-         <li> <a href="#" class="textbarra" id="btnChampions"><span>Campeones</span></a></li>
-         <li><a href="#" class="textbarra" id="btnGamemode"><span>Modo de juego</span></a></li>
-       </ul>
-    
-      </nav>
-      </header>
+   
       <div id="root">
 
 <!--contenido-->
@@ -61,7 +72,6 @@
 
 
 
-
    <div  id="showChampions"> 
    <section class="container" id="containerChampions">
      
@@ -82,9 +92,11 @@
         </div>
         
       </div>
-    </div>
+    
 
     <script type="module" src="main.js"></script>
     <script type="module" src="data.js"></script>
+
+
   </body>
 </html>
