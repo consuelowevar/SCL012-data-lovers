@@ -1,18 +1,15 @@
-/* Manejo de data */
-// esta es una función de ejemplo
-import  LoL  from './data/lol/lol.js';
 
-// return 'filtrar';
-//};
-/* Manejo de data */
-// esta es una función de ejemplo
-const dataLol=Object.values(LoL.data); //.entries llama a las [key:value]
-console.log(dataLol);
+import LoL from './data/lol/lol.js';
 
-/* Funcion Filtrar x Rol BOTON ASESINOS*/
-//function filtrar (filtro,ases) 
+const dataLol = Object.values(LoL.data); /* .entries llama a las [key:value] */
 
-export function lala(dato){
-  let resultadoFiltro= dataLol.filter(elemento => (elemento.tags.includes(dato)))  
-  return resultadoFiltro
+/* Funcion Filtrar x Roles */
+export function filtroXrol(dato) {
+  const resultadoFiltro = dataLol.filter(elemento => (elemento.tags.includes(dato)));
+  return resultadoFiltro;
+}
+/* ´Funcion filtrar x rol BOTON LUCHADORES´ */
+export function check(attack) {
+  const resultadoAttack = dataLol.filter(propiedad => (propiedad.info.includes(attack)));
+  return resultadoAttack;
 }
