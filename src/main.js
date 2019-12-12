@@ -131,6 +131,9 @@ function crearTarjeta (datos){
   }
 }
 //BOTON ASESINOS
+
+document.getElementById("assassin").style.display="hola hol hola";
+
 const btnassassin= document.getElementById('assassin');
 console.log(btnassassin)
 btnassassin.addEventListener('click', () => {
