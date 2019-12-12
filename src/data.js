@@ -9,10 +9,15 @@ import  LoL  from './data/lol/lol.js';
 const dataLol=Object.values(LoL.data); //.entries llama a las [key:value]
 console.log(dataLol);
 
-/* Funcion Filtrar x Rol BOTON ASESINOS*/
-//function filtrar (filtro,ases) 
-
-export function lala(dato){
+//Funcion Filtrar x Roles
+export function filtroXrol(dato){
   let resultadoFiltro= dataLol.filter(elemento => (elemento.tags.includes(dato)))  
   return resultadoFiltro
+}
+//Funcion filtrar x rol BOTON LUCHADORES
+export function check (attack){
+  let resultadoAttack=dataLol.filter(propiedad => (propiedad.info.includes(attack)))
+  console.log(resultadoAttack)
+  return resultadoAttack
+
 }

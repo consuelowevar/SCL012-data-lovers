@@ -6,7 +6,8 @@ console.log(example); */
 
 
 import  LoL  from './data/lol/lol.js';
-import {lala} from './data.js';
+import {filtroXrol} from './data.js';
+
 console.log('LoL', LoL);
 
 const dataLol=Object.values(LoL.data);
@@ -20,36 +21,10 @@ const containerChampions=document.getElementById("containerChampions");
     name, title, img, blurb, info,( attack, defense, magic, difficulty), tags, 
     stats: hp, armor, attackrange, attackdamage,movespeed 
 */
-function crearTarjeta (datos){
-    for (let i=0;i <datos.length; i++){
-        containerChampions.innerHTML += 
-
-        `<div class="card-champion">
-        <div><img class="avatar" src="${datos[i].img}">
-        </div>
-        <div class="name">
-        <h1>${datos[i].name}</h1></div>
-        <div class="tittle">
-        <h4>${datos[i].title}</h4></div>
-        <div><img class=power src="imagen/attack.jpg"
-        <p> Ataque ${datos[i]. info. attack}</p></div>
-        <div><img class=power src="imagen/defense.jpg"
-        <p> Defensa ${datos[i]. info. defense}</p></div>
-        <div><img class=power src="imagen/magic.jpg"
-        <p> Magia ${datos[i]. info. magic}</p></div>
-        <div><img class=power src="imagen/difficulty.jpg"
-        <p> Dificultad ${datos[i]. info. difficulty}</p></div>
-        </div>
-        </div>`
-        
-       // containerChampions.innerHTML += dataLol[i].title;
-    }
-}
-
 btnChampions.addEventListener('click', () =>{   
     //Object.value y Object.keys capturamos los valores
     //containerChampions.innerHTML = dataLol[0].name;
- 
+    containerChampions.innerHTML=""
     for (let i=0;i <dataLol.length; i++){
         containerChampions.innerHTML += 
 
@@ -83,31 +58,127 @@ btnassassin.addEventListener('click', () => {
     let valorClase= document.getElementById("assassin").value
     console.log(valorClase)
     containerChampions.innerHTML=""
-    let datosAssasin=lala(valorClase)
+    let datosAssasin=filtroXrol(valorClase)
     crearTarjeta(datosAssasin)
 });
 //BOTON LUCHADORES
 const btnfighters= document.getElementById('fighters');
-btnfighters.addEventListener('click', () => {
-console.log("fighters")
+console.log(btnfighters)
+btnfighters.addEventListener("click", () => {
+    let valorFight=document.getElementById("fighters").value
+    console.log(valorFight)
+    containerChampions.innerHTML=""
+    let datosFight=filtroXrol(valorFight)
+    console.log(valorFight)
+    crearTarjeta(datosFight)
 });
 //BOTON MAGOS
-const btnwizards= document.getElementById('wizards');
-btnwizards.addEventListener('click', () => {
-console.log("wizards")
+const btnMage= document.getElementById('mages');
+console.log(btnMage)
+btnMage.addEventListener('click', () =>{
+    let valorMage= document.getElementById("mages").value
+    console.log(valorMage)
+    containerChampions.innerHTML=""
+    let datosMage=filtroXrol(valorMage)
+    console.log(valorMage)
+    crearTarjeta(datosMage)
 });
 //BOTON TANQUES
-const btntanks= document.getElementById('tanks');
-btntanks.addEventListener('click', () => {
-console.log("tanks")
+const btntank= document.getElementById('tanks');
+console.log(tanks)
+btntank.addEventListener('click', () => {
+    let valorTanks= document.getElementById("tanks").value
+    console.log(valorTanks)
+    containerChampions.innerHTML=""
+    let datosTank=filtroXrol(valorTanks)
+    crearTarjeta(datosTank)
 });
 //BOTON TIRADORES
-const btnshooters= document.getElementById('shooters');
-btnshooters.addEventListener('click', () => {
-console.log("shooters")
+const btnmarksman= document.getElementById('marksmans');
+console.log(marksmans)
+btnmarksman.addEventListener('click', () => {
+    let valorMarksman= document.getElementById("marksmans").value
+    containerChampions.innerHTML=""
+    console.log(valorMarksman)
+    let datosMarksman=filtroXrol(valorMarksman)
+    crearTarjeta(datosMarksman)
 });
 //BOTON SOPORTE
-const btnsupport= document.getElementById('support');
+const btnsupport= document.getElementById('supports');
+console.log(supports)
 btnsupport.addEventListener('click', () => {
-console.log("support")
+    let valorSupport=document.getElementById("supports").value
+    containerChampions.innerHTML=""
+    console.log(valorSupport)
+    let datoSupport = filtroXrol(valorSupport)
+    crearTarjeta(datoSupport)
 });
+
+function crearTarjeta (datos){
+    for (let i=0;i <datos.length; i++){
+        containerChampions.innerHTML += 
+
+        `<div class="card-champion">
+        <div><img class="avatar" src="${datos[i].img}">
+        </div>
+        <div class="name">
+        <h1>${datos[i].name}</h1></div>
+        <div class="tittle">
+        <h4>${datos[i].title}</h4></div>
+        <div><img class=power src="imagen/attack.jpg"
+        <p> Ataque ${datos[i]. info. attack}</p></div>
+        <div><img class=power src="imagen/defense.jpg"
+        <p> Defensa ${datos[i]. info. defense}</p></div>
+        <div><img class=power src="imagen/magic.jpg"
+        <p> Magia ${datos[i]. info. magic}</p></div>
+        <div><img class=power src="imagen/difficulty.jpg"
+        <p> Dificultad ${datos[i]. info. difficulty}</p></div>
+        </div>
+        </div>`
+        
+       // containerChampions.innerHTML += dataLol[i].title;
+    }
+}
+
+/*/checklistOne
+const chkOne= document.getElementById('checkss');
+console.log(chkOne)
+chkOne.addEventListener("click",()=> {
+    let valorAttack=document.getElementById("checkss").value
+    console.log(valorAttack)
+    
+       // containerChampions.innerHTML += dataLol[i].title;
+    
+
+});
+//checklist SECOND
+const chkSec= document.getElementById('checkse');
+console.log(chkSec)
+chkSec.addEventListener("click",()=> {
+    let valorMagia=document.getElementById("checkse").value
+    console.log(valorMagia)
+})  
+//checklist THIRD
+const chkThird= document.getElementById('checkt');
+console.log(chkThird)
+chkThird.addEventListener("click",()=> {
+    let valorDifficult=document.getElementById("checkt").value
+    console.log(valorDifficult)
+})  
+//checklist FOURTH
+const chkFourth= document.getElementById('checkf');
+console.log(chkFourth)
+chkFourth.addEventListener("click",()=> {
+    let valorDefense=document.getElementById("checkf").value
+    console.log(valorDefense)
+})  
+//});
+/*
+console.log(btnassassin)
+btnassassin.addEventListener('click', () => {
+    let valorClase= document.getElementById("assassin").value
+    console.log(valorClase)
+    containerChampions.innerHTML=""
+    let datosAssasin=lala(valorClase)
+    crearTarjeta(datosAssasin)
+*/
