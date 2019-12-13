@@ -15,36 +15,18 @@
   <header class="cabezote">
     <a href="#" class="logo" id="logo"> <img src="imagen/logo.png"></a>
 
-    <nav class="bmenu">
-      <!--  barra nav -->
-      <ul class="">
-        <li><a href="#" class="textbarra" id="btnIndex"><span>Juego</span></a></li>
-        <li>
-          <a href="#" class="textbarra" id="btnChampions"><span>Campeones</span></a>
-          <div class="submenu">
-            <ul id="submenu-roles">
-              <!-- SUBMENU DE ROL DESPLEGABLE  -->
-              <li><button class="text" id="assassin" value="Assassin">ASESINOS</button></li>
-              <!--<p>LOS ASESINOS ANSÍAN LA CAZA
-                  Los asesinos, maestros de la precisión, son ágiles cazadores en busca del asesinato perfecto.</p>-->
-              <li><button class="text" id="fighters" value="Fighter">LUCHADORES</button></li>
-              <li><button class="text" id="mages" value="Mage">MAGOS</button></li>
-              <li><button class="text" id="tanks" value="Tank">TANQUES</button></li>
-              <li><button class="text" id="marksmans" value="Marksman">TIRADORES</button></li>
-              <li><button class="text" id="supports" value="Support">SOPORTES</button></li>
-            </ul>
-          </div>
-        </li>
-        <li><a href="#" class="textbarra" id="btnGamemode"><span>Modo de juego</span></a></li>
+    <nav class="bmenu">     <!--  barra nav -->
+      <ul class="menu-items">
+          <li class="nav-item">
+            <a href="#" class="textbarra" id="btnIndex"><span>Juego</span></a>
+          </li>
+          <li class="nav-item-dropdown">
+              <a href="#" class="textbarra" id="btnChampions"><span>Campeones</span></a>
+          </li> 
+          <li class="nav-item"><a href="#" class="textbarra" id="btnGamemode"><span>Modo de juego</span></a></li>
       </ul>
-    </nav>
-   <!---- <label><input type="checkbox" id="checkss" value="checkss"> + Ataque</label>
-    <label><input type="checkbox" id="checkse" value="checkse"> + Magia</label>
-    <label><input type="checkbox" id="checkt" value="checkt"> + Dificultad</label>
-    <label><input type="checkbox" id="checkf" value="checkf"> + Defensa </label>-->
+  </nav>
   </header>
-
-
 
     <div align="center" id="root">
 
@@ -55,13 +37,9 @@
           <p>
             <div align="left" class="text">
               <h1>¿Qué es League of Legends?</h1>
-              <p>League of Legends es un juego en línea competitivo de ritmo frenético, que fusiona la velocidad y la
-                intensidad de la estrategia en tiempo real (ETR) con elementos de juegos de rol.</p>
-              <p>Dos equipos de poderosos campeones, cada uno con un diseño y un estilo de juego únicos, compiten cara a
-                cara a través de diversos campos de batalla y modos de juego.</p>
-              <p>League of Legends cuenta con un plantel de campeones en constante crecimiento, cada uno con un diseño y
-                estilo de juego único. Aquí podrás ver el plantel actual y conocer más detalles sobre los personajes que
-                te interesen.</p>
+              <p>Es un juego en línea competitivo, que fusiona la velocidad y la intensidad de la estrategia en tiempo real (ETR) con elementos de juegos de rol.</p>
+              <p>Dos equipos de poderosos campeones, cada uno con un diseño y un estilo de juego únicos, compiten cara a cara a través de diversos campos de batalla y modos de juego.</p>
+              <p>League of Legends cuenta con un plantel de campeones en constante crecimiento, cada uno con un diseño y estilo de juego único. Aquí podrás ver el plantel actual y conocer más detalles sobre los personajes que te interesen.</p>
             </div>
           </p>
         </div>
@@ -101,6 +79,16 @@
 
 
       <div id="showChampions">
+              <nav class="submenu" id="submenu">
+                  <ul id="submenu-roles">
+                    <li class="submenu-item"><button class="text" id="assassin" value="Assassin">ASESINOS</button></li>
+                    <li class="submenu-item"><button class="text" id="fighters" value="Fighter">LUCHADORES</button></li>
+                    <li class="submenu-item"><button class="text" id="mages" value="Mage">MAGOS</button></li>
+                    <li class="submenu-item"><button class="text" id="supports" value="Support">SOPORTES</button></li>
+                    <li class="submenu-item"><button class="text" id="tanks" value="Tank">TANQUES</button></li>
+                    <li class="submenu-item"><button class="text" id="marksmans" value="Marksman">TIRADORES</button></li>
+                  </ul>   
+                </nav>
         <section class="container" id="containerChampions">
 
           <!--  seccion visulaizacion de champions-->
@@ -114,9 +102,9 @@
         <footer class="footer">
           <div class="btn">
             <ul>
-              <li><a href="https://signup.lan.leagueoflegends.com/es/signup/index#/" class=text id="btnJ"> Jugar </a>
+              <li><a href="https://signup.lan.leagueoflegends.com/es/signup/index#/" target="_blank" class=text id="btnJ"> Jugar </a>
               </li>
-              <li><a href="https://las.leagueoflegends.com/es/page/unete-la-comunidad-de-league-legends" class=text
+              <li><a href="https://las.leagueoflegends.com/es/page/unete-la-comunidad-de-league-legends" target="_blank" class=text
                   id="btnC"> Comunidad </a> </li>
             </ul>
           </div>
