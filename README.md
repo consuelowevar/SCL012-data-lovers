@@ -1,3 +1,5 @@
+![logo champions](Prototipos/Champions-LoL.jpg)
+
 # Data Lovers
 
 ## 1. Resumen del proyecto
